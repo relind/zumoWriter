@@ -208,6 +208,124 @@ void drawB()
   
 }
 
+void drawR()
+{
+  goForward(450);
+
+  turnRight(90);
+
+  goForward(110);
+
+  turnRight(45);
+
+  goForward(70);
+
+  turnRight(45);
+
+  goForward(75);
+
+  turnRight(45);
+
+  goForward(50);
+
+  turnRight(45);
+
+  goForward(120);
+
+  turnLeft(135);
+
+  goForward(285);
+
+  turnLeft(48);
+
+  goForward(200);
+
+  turnLeft(90);
+}
+
+//ends at top not bottom
+void drawS()
+{
+  goForward(50);
+
+  turnRight(135);
+
+  goForward(45);
+
+  turnLeft(44);
+
+  goForward(200);
+
+  turnLeft(45);
+
+  goForward(45);
+
+  turnLeft(45);
+
+  goForward(195);
+
+  turnLeft(45);
+
+  goForward(45);
+
+  turnLeft(47);
+
+  goForward(200);
+
+  turnRight(45);
+
+  goForward(45);
+
+  turnRight(47);
+
+  goForward(175);
+
+  turnRight(45);
+
+  goForward(45);
+
+  turnRight(48);
+
+  goForward(200);
+
+  turnRight(45);
+
+  goForward(45);
+
+  turnLeft(45);
+
+  goForward(200);
+}
+
+//starts at top
+void drawE()
+{
+  goForward(180);
+
+  goBackward(180);
+
+  turnRight(90);
+
+  goForward(220);
+
+  turnLeft(90);
+
+  goForward(180);
+
+  goBackward(180);
+
+  turnRight(90);
+
+  goForward(220);
+
+  turnLeft(90);
+
+  goForward(180);
+
+  goBackward(180);
+  
+  
+}
 void loop() {
 
     int16_t countsLeft = encoders.getCountsLeft();
@@ -218,10 +336,9 @@ void loop() {
     if(buttonA.isPressed())
     {
       delay(1000);
-      
-      drawB();
-
-      drawA();
+      drawR();
+      drawS();
+      drawE();
       
     }
 
