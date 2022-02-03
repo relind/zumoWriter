@@ -36,7 +36,7 @@ void goForward(int16_t amount)
   int16_t left = encoders.getCountsLeft();
   while(left < amount)
       {
-        motors.setSpeeds(100, 100);
+        motors.setSpeeds(75, 75);
         left = encoders.getCountsLeft();
 
         display.clear();
@@ -53,7 +53,7 @@ void goBackward(int16_t amount)
   int16_t left = encoders.getCountsLeft();
   while(left > -amount)
       {
-        motors.setSpeeds(-100, -100);
+        motors.setSpeeds(-75, -75);
         left = encoders.getCountsLeft();
 
         display.clear();
@@ -72,7 +72,7 @@ void turnRight(int degrees)
   
   while(left < (FULL_360 * ( degrees / 360.0)))
       {
-        motors.setSpeeds(100, 0);
+        motors.setSpeeds(75, 0);
         left = encoders.getCountsLeft();
 
         display.clear();
@@ -91,7 +91,7 @@ void turnLeft(int16_t degrees)
   int16_t left = encoders.getCountsLeft();
   while(left > -(FULL_360 * ( degrees / 360.0)))
       {
-        motors.setSpeeds(-100, 0);
+        motors.setSpeeds(-75, 0);
         left = encoders.getCountsLeft();
 
         display.clear();
@@ -222,7 +222,7 @@ void drawR()
 
   turnRight(45);
 
-  goForward(75);
+  goForward(100);
 
   turnRight(45);
 
@@ -234,7 +234,7 @@ void drawR()
 
   turnLeft(135);
 
-  goForward(285);
+  goForward(300);
 
   turnLeft(48);
 
@@ -260,15 +260,15 @@ void drawS()
 
   goForward(45);
 
-  turnLeft(45);
+  turnLeft(47);
 
   goForward(195);
 
-  turnLeft(45);
+  turnLeft(46);
 
   goForward(45);
 
-  turnLeft(47);
+  turnLeft(46);
 
   goForward(200);
 
@@ -276,7 +276,7 @@ void drawS()
 
   goForward(45);
 
-  turnRight(47);
+  turnRight(46);
 
   goForward(175);
 
@@ -284,7 +284,7 @@ void drawS()
 
   goForward(45);
 
-  turnRight(48);
+  turnRight(46);
 
   goForward(200);
 
@@ -300,19 +300,9 @@ void drawS()
 //starts at top
 void drawE()
 {
-  goForward(180);
+  goForward(195);
 
-  goBackward(180);
-
-  turnRight(90);
-
-  goForward(220);
-
-  turnLeft(90);
-
-  goForward(180);
-
-  goBackward(180);
+  goBackward(195);
 
   turnRight(90);
 
@@ -320,9 +310,19 @@ void drawE()
 
   turnLeft(90);
 
-  goForward(180);
+  goForward(195);
 
-  goBackward(180);
+  goBackward(195);
+
+  turnRight(90);
+
+  goForward(220);
+
+  turnLeft(90);
+
+  goForward(195);
+
+  goBackward(195);
   
   
 }
